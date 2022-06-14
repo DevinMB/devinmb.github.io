@@ -3,7 +3,8 @@
     <nav>
     <router-link to="/">Home</router-link> 
     <router-link to="/career">Career</router-link> 
-    <router-link to="/about">About</router-link> 
+    <a class="contact-me" href="mailto:devinmbutts@gmail.com">Contact Me</a>
+    
     </nav>
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in" >
@@ -47,6 +48,13 @@ nav a {
   padding-bottom: .25em;
   padding-top: .25em;
   text-decoration: none;
+}
+
+.contact-me:hover{
+  color: #e44c65;
+  transition: color 0.2s ease-in-out;
+	text-decoration: none;
+  border-radius: .25em;
 }
 
 nav a.router-link-exact-active {

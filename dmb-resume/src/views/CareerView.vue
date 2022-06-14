@@ -1,8 +1,10 @@
 <template>
     <div class="career">
+        <education-2-tech-elevator/>
         <job-3-questx/>
         <job-2-collins/>
         <job-1-robroy/>
+        <education-1-university/>
     </div>
 </template>
 
@@ -10,8 +12,10 @@
 import Job1Robroy from '../components/Job1-Robroy.vue'
 import Job2Collins from '../components/Job2-Collins.vue'
 import Job3Questx from '../components/Job3-Questx.vue'
+import Education2TechElevator from '../components/Education2-TechElevator.vue'
+import Education1University from '../components/Education1-UniversityMichigan.vue'
 export default {
-  components: { Job1Robroy, Job2Collins, Job3Questx },
+  components: { Job1Robroy, Job2Collins, Job3Questx, Education2TechElevator, Education1University },
 
 }
 </script>
@@ -30,7 +34,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 1em;
+    padding-top: 2em;
     /* padding-right: 1em; */
     padding-bottom: 1em;
     /* background-image: url("../assets/images/pic04x.jpg"); */

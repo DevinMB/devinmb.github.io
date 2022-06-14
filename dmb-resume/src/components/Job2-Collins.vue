@@ -3,7 +3,7 @@
         <div class="job-image">
             <img src="../assets/images/Collins-logo.png" alt="Collins">
             <div class="job-quote">
-                <p>In the middle of difficulty lies opportunity.</p>
+                <p>On the edge of uncomfortable lies growth.</p>
             </div>
         </div>
         

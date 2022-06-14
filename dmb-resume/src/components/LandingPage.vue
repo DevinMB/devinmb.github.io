@@ -4,7 +4,7 @@
           Devin Butts
       </div>
       <div class="title"> 
-          Senior Financial Analyst
+          Financial & Data Consultant
       </div>
       <div class="quote"> 
           Develope a passion for learning. If you do, you will never cease to grow.
@@ -12,9 +12,18 @@
       <div class="profile-picture"> 
           <img src="../assets/images/Profile.jpg" alt="Devin Butts">
       </div>
-      <div class="projects"> 
-          This is where my projects will go....
+      <div class="socials">
+            <a href="https://github.com/DevinMB">
+                <img src="../assets/images/GitHub-Mark-Light-120px-plus.png" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/devinmb/">
+                <img src="../assets/images/linkedin-logo.png"/>
+            </a>
+
       </div>
+      <!-- <div class="projects"> 
+          This is where my projects will go....
+      </div> -->
   </div>
 </template>
 
@@ -51,6 +60,7 @@ export default {
     height: auto;
     justify-content: center;
     border-radius: 50%;
+    padding-top: 1em;
 }
 
 .name {
@@ -79,8 +89,14 @@ export default {
 .projects {
     display: flex;
     align-items: center;
-    padding-top: 10em;
+    padding-top: 7em;
     padding-bottom: 1em;
+}
+.socials img {
+    height: 4em;
+    width: auto;
+    padding: 1em;
+
 }
 
 </style>
