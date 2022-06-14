@@ -1,17 +1,17 @@
 <template>
     <div class="career">
-        
+        <job-3-questx/>
         <job-2-collins/>
         <job-1-robroy/>
-        
     </div>
 </template>
 
 <script>
 import Job1Robroy from '../components/Job1-Robroy.vue'
 import Job2Collins from '../components/Job2-Collins.vue'
+import Job3Questx from '../components/Job3-Questx.vue'
 export default {
-  components: { Job1Robroy, Job2Collins },
+  components: { Job1Robroy, Job2Collins, Job3Questx },
 
 }
 </script>
@@ -21,7 +21,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-image: linear-gradient(to bottom right, rgb(248, 188, 188), rgb(147, 216, 235));
+    background-image: linear-gradient(to bottom right, rgb(248, 188, 188,.5), rgb(147, 216, 235,.5));
     transition: color 0.5s ease-in-out;
    
 }
@@ -50,7 +50,7 @@ export default {
     align-items: center;
     font-style: italic;
     font-weight: 300;
-    color:rgb(89, 89, 111)
+    color:rgb(236, 236, 239)
     
 }
 .job-info {

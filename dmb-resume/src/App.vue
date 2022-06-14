@@ -5,7 +5,12 @@
     <router-link to="/career">Career</router-link> 
     <router-link to="/about">About</router-link> 
     </nav>
-    <router-view/>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in" >
+        <component :is="Component" />
+      </transition>
+    </router-view>
+    
   </div>
 </template>
 
@@ -50,6 +55,18 @@ nav a.router-link-exact-active {
   border: 0;
   border-radius: .25em;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .7s ease;
+}
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 
 
 </style>

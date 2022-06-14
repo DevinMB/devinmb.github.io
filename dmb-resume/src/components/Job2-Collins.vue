@@ -1,7 +1,7 @@
 <template>
   <div class="job-container">
         <div class="job-image">
-            <img src="../assets/images/Collins-logo.png" alt="Questx">
+            <img src="../assets/images/Collins-logo.png" alt="Collins">
             <div class="job-quote">
                 <p>In the middle of difficulty lies opportunity.</p>
             </div>
