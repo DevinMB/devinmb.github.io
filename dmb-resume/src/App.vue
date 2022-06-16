@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <nav>
     <router-link to="/">Home</router-link> 
     <router-link to="/career">Career</router-link> 
@@ -24,13 +24,15 @@
 	/* line-height: 1.75em; */
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
-
-  
-  
+  max-width: 1440px;
+  margin: 0 auto;
   }
+
+
 
 body{
   background-color: #1c1d26;
+  
 }
 
 nav {
