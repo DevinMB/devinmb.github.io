@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkdevin_butts"]=self["webpackChunkdevin_butts"]||[]).push([[443],{7381:function(n,t,u){u.r(t),u.d(t,{default:function(){return d}});var e=u(3396);const s={class:"about"},a=(0,e._)("h1",null,"This is an about page",-1),r=[a];function i(n,t){return(0,e.wg)(),(0,e.iD)("div",s,r)}var c=u(89);const o={},b=(0,c.Z)(o,[["render",i]]);var d=b}}]);
+//# sourceMappingURL=about.88b766dc.js.map
