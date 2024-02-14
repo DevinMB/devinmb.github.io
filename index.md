@@ -10,114 +10,54 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+# About Me
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+As a developer with a keen interest in event streaming and data processing technologies, I've recently been focusing on **Kafka**. My journey in software development, especially in the context of banking and financial services, has led me to explore and specialize in Kafka and API work, leveraging my background in finance and software development to build robust, scalable solutions.
 
-## Header 2
+## Project 1: Kafka-Based Data Streaming Platform
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+This project involves the development of a data streaming platform using Kafka, designed to handle high-volume financial transactions in real-time. The platform ensures reliable data processing and distribution, catering to critical banking operations.
 
-### Header 3
+### GitHub Repositories:
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+- **Repo 1: Core Streaming Engine**
+  - [Link to Repo](#)
+  - **Description:** This repository contains the core components of the streaming platform, including Kafka producers, consumers, and stream processors.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+- **Repo 2: API Integration Module**
+  - [Link to Repo](#)
+  - **Description:** This repository focuses on the API layer that integrates the streaming platform with banking systems, facilitating data exchange and operations.
 
-#### Header 4
+## Project 2: Real-Time Analytics Dashboard
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+A real-time analytics dashboard that leverages Kafka streams to aggregate, process, and visualize financial data. This project aims to provide insights and analytics for financial data in real-time, supporting decision-making processes.
 
-##### Header 5
+### GitHub Repositories:
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+- **Repo 1: Dashboard Backend**
+  - [Link to Repo](#)
+  - **Description:** Backend services for the analytics dashboard, handling data processing and aggregation using Kafka Streams.
 
-###### Header 6
+- **Repo 2: Dashboard Frontend**
+  - [Link to Repo](#)
+  - **Description:** The frontend component of the dashboard, built to display analytics and insights derived from the processed financial data.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+There should be whitespace between sections to ensure readability.
 
-### There's a horizontal rule below this.
+### My Skills
 
-* * *
+- **Kafka:** Deep understanding of Kafka architecture, stream processing, and real-time data pipelines.
+- **Software Development:** Proficient in multiple programming languages and frameworks, with a focus on building scalable and efficient applications.
 
-### Here is an unordered list:
+### Contact Me
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+For collaboration or more information about my projects, feel free to reach out or visit my [GitHub profile](#).
 
-### And an ordered list:
+### Small Image
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+![Kafka Logo](https://path-to-kafka-logo.png)
 
-### And a nested list:
+### Large Image
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+![Data Streaming Visualization](https://path-to-data-streaming-visualization.png)
 
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
