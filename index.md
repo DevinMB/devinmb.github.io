@@ -6,7 +6,7 @@ layout: default
 
 # Welcome!
 
-You've reached my projects page, going forward I'm going to attempt to detail the silly projects that I come up with here. 
+You've reached my projects page, going forward I'm going to attempt to detail the silly projects that I come up with here. Currently interested in Kafka and event driven architecture... Also load cells of course.
 
 Obligitory [About Me](./about-me.html) page for those who care.
 
