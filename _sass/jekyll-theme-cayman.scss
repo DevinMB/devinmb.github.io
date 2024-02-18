@@ -376,3 +376,9 @@ a {
 .site-footer-credits {
   color: $blockquote-text-color;
 }
+
+
+.custom-img-size {
+  width: 300px; /* Adjust as needed */
+  /* height: auto; To preserve aspect ratio */
+}
