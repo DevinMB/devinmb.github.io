@@ -65,6 +65,9 @@ My friends and I have an anonomous chat that is for memes. With about 30 people 
 The bot consumes whispers and tries to make an impactful message to the group once a day. The results are silly, but the pipeline behind it was very fun to implement.
 In future releases I'd like to use reactions to it's messagse as sentiment in the next model. Or use a LLM like LLAMA 2 or something. We shall see!
 
+<img src="./assets/pictures/whisper_text_v1.png" alt="Example Whisper From Bot" class="custom-img-size" />
+
+
 ### Overview:
 
 - **Whisper Consumer: Logs all text messages**
