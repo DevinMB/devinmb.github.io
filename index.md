@@ -50,8 +50,7 @@ _The Chair™️_ -isn't it beautiful.
   - [Link to Repo](https://github.com/DevinMB/sit-stats-dashboard)
   - **Description:** I'm terrible at front end, but this UI was created in Vue.js and consumes from the web sockets provided by the Sit Stats API. Lets you filter by avg value, time of sit, and duration of sit. Clicking on a device opens the additional details and filters, otherwise device will only show a status of in use/not in use. 
   - It look like this:
-    <img src="./assets/pictures/device_dashboard.png" alt="Dashboard UI View" class="custom-img-size" />
-
+    ![Dashboard UI](./assets/pictures/device_dashboard.png)
 
 
 
