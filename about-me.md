@@ -15,7 +15,7 @@ My recent interest is in using the event driven architecture and Kafka to facili
 ### My Skills
 
 - **Event Driven Architecture:** Deep understanding of Kafka architecture, stream processing, and real-time data pipelines.
-- **Performant Streaming and API Developement:** Able to build applications that are maintainable and performant under heavey load. 
+- **Performant Streaming and API Developement:** Expertise in designing and implementing scalable applications that remain efficient and reliable under high-demand conditions.
 - **Languages:** Proficient in multiple programming languages and frameworks. 
   - Java, Python, SQL, Javascript
 - **Financial Planning and Analysis:** Strong background in financial analysis, budgeting, and forecasting. Proficient in applying GAAP principles and conducting financial reporting.
