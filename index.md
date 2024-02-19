@@ -89,3 +89,7 @@ In future releases I'd like to use reactions to it's messagse as sentiment in th
   - [Link to Repo](https://github.com/DevinMB/whisper-text-send-bot/tree/main)
   - **Description:** This application schedules a whisper to be sent once a day using the new model.
 
+- **Whisper LLAMA2 Text Generation: We getting serious here**
+  - [Link to Repo](https://github.com/DevinMB/whisper-ollama-message-generator)
+  - **Description:** This application utilizes a LLAMA2 model, I'm embedding each message and using the embeded vectors to generate messages.
+
