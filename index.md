@@ -91,5 +91,5 @@ In future releases I'd like to use reactions to it's messagse as sentiment in th
 
 - **Whisper LLAMA2 Text Generation: We getting serious here**
   - [Link to Repo](https://github.com/DevinMB/whisper-ollama-message-generator)
-  - **Description:** This application utilizes a LLAMA2 model, I'm embedding each message and using the embeded vectors to generate messages.
+  - **Description:** This application utilizes a LLAMA2 model, I'm embedding each message and using the embeded vectors to generate messages. Next step is to embed websites and images sent to the chat, giving the model more context! 
 
