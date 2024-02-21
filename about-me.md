@@ -8,7 +8,7 @@ description: Boring
 
 Hello, I'm Devin Butts, a Full Stack Developer with a rich background in finance and a passionate focus on data streaming and event-driven architectures. My journey is unique, starting in operational accounting and financial planning & analysis (FP&A) before making a pivotal shift into software development. Today, I specialize in leveraging Kafka to build robust, scalable, and efficient data streaming solutions for the banking industry.
 
-With over six years of senior finance experience and a solid foundation in software development, I am at the intersection between financial data and technology. My work involves not just coding but also conceptualizing and implementing systems that enhance data flow and integrity, ensuring that financial institutions can operate at their peak efficiency.
+With over six years of senior finance experience and a solid foundation in software development, I am at the intersection between financial data and technology. My work involves not just coding but also conceptualizing and implementing systems, ensuring that financial institutions can operate at their peak efficiency.
 
 My recent interest is in using the event driven architecture and Kafka to facilitate real-time data processing and analytics.
 
