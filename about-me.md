@@ -1,31 +1,29 @@
 ---
 layout: default
-title: About Me
-description: Boring
+title: About
+description: Devin Butts — lead software engineer specializing in Kafka and API development, with a finance background.
 ---
 
-# About Me
+<p class="eyebrow">About</p>
 
-Hello, I'm Devin Butts, a Full Stack Developer with a rich background in finance and a passionate focus on data streaming and event-driven architectures. My journey is unique, starting in operational accounting and financial planning & analysis (FP&A) before making a pivotal shift into software development. Today, I specialize in leveraging Kafka to build robust, scalable, and efficient data streaming solutions for the banking industry.
+# Hi, I'm Devin.
 
-With over six years of senior finance experience and a solid foundation in software development, I am at the intersection between financial data and technology. My work involves not just coding but also conceptualizing and implementing systems, ensuring that financial institutions can operate at their peak efficiency.
+<p class="intro">Lead software engineer specializing in Kafka and API development. I design resilient, auditable data streams that move billions of records a day — with a finance background that keeps me focused on auditability and on mentoring the people I work with.</p>
 
-My recent interest is in using the event driven architecture and Kafka to facilitate real-time data processing and analytics.
+My path is a little unusual. I spent years in senior finance roles — operational accounting and FP&A — before moving into software development. That background still shapes how I work: I care about data integrity, traceability, and building systems people can actually reason about.
 
-### My Skills
+Today I'm a Lead Software Engineer and Application Technical Lead on PNC's Data Streaming Platform, where I own the platform's technical direction and team leadership. I've helped scale it from a handful of users to online banking for millions by tuning Kafka pipelines, improving fault tolerance, and adding observability — and I spend a good chunk of my time mentoring developers on API design and streaming architecture.
 
-- **Event Driven Architecture:** Deep understanding of Kafka architecture, stream processing, and real-time data pipelines.
-- **Performant Streaming and API Developement:** Expertise in designing and implementing scalable applications that remain efficient and reliable under high-demand conditions.
-- **Languages:** Proficient in multiple programming languages and frameworks. 
-  - Java, Python, SQL, Javascript
-- **Financial Planning and Analysis:** Strong background in financial analysis, budgeting, and forecasting. Proficient in applying GAAP principles and conducting financial reporting.
-- **Project Management:** Experience leading teams, in financial and software developement settings.
-- **Data Analysis:** Skilled in using/creating reports in Dynatrace, Excel, PowerBI and SSRS. 
+Outside of work I'm a maker — homelab infrastructure, LoRa radio, and IoT sensors. Most of the projects on this site run on self-hosted hardware at home.
 
-Last Updated: February of 2024 (Because I know I'll forget to update this.)
+### What I work with
 
-### Contact Me
+- **Streaming & event-driven architecture** — Kafka, stream processing, and real-time data pipelines at scale.
+- **APIs & services** — Java, Spring Boot, and resilient API design aligned to enterprise standards.
+- **Languages & data** — Java, Python, JavaScript/Vue; PostgreSQL, Oracle, and MongoDB.
+- **Platform & observability** — OpenShift, Kubernetes, Jenkins, Dynatrace, and LogScale.
+- **Finance** — FP&A, GAAP, financial reporting, and analysis in Power BI, SSRS, and Excel.
 
-For collaboration or more information about my projects, feel free to reach out or visit my [GitHub profile](https://github.com/DevinMB).
+### Get in touch
 
-[back](./)
+Always happy to talk shop. Reach me by [email](mailto:devinmbutts@gmail.com), connect on [LinkedIn](https://www.linkedin.com/in/devinmb/), or browse my work on [GitHub](https://github.com/DevinMB).

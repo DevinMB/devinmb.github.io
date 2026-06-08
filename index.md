@@ -1,95 +1,38 @@
 ---
-layout: default
+layout: card
+title: Devin Butts
+description: Lead software engineer specializing in Kafka and API development.
 ---
 
-<!-- Text can be **bold**, _italic_, or ~~strikethrough~~. -->
+<article class="card">
 
-# Welcome!
+  <!-- To use a photo instead of the monogram, drop a square image at
+       assets/pictures/profile.jpg and replace the line below with:
+       <img src="{{ '/assets/pictures/profile.jpg' | relative_url }}" alt="Devin Butts"> -->
+  <div class="avatar" aria-hidden="true">DB</div>
 
-You've reached my projects page, going forward I'm going to attempt to detail the silly projects that I come up with here. Currently interested in Kafka and event driven architecture... Also load cells of course.
+  <h1 class="name">Devin Butts</h1>
+  <p class="role">Lead software engineer specializing in Kafka &amp; API development.</p>
 
-Obligitory [About Me](./about-me.html) page for those who care.
+  <div class="divider"></div>
 
+  <nav class="contacts" aria-label="Contact">
+    <a class="contact-link" href="mailto:devinmbutts@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      Email
+    </a>
+    <a class="contact-link" href="https://www.linkedin.com/in/devinmb/">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.94-1.79-2.94-1.79 0-2.07 1.4-2.07 2.85V21H9z"/></svg>
+      LinkedIn
+    </a>
+    <a class="contact-link" href="https://github.com/DevinMB">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+      GitHub
+    </a>
+  </nav>
 
-## Load Cells and Kafka: A Match Made in Heaven. 
+  <a class="cta" href="{{ '/projects.html' | relative_url }}">
+    View projects <span class="arrow" aria-hidden="true">&rarr;</span>
+  </a>
 
-Recently I've been really interested in load cells and how they operate. One thing led to another and now I have a sensor for my living room chair and an unimaginable amount of data surrounding that chair.
-Leading me to think about applicable use cases. This project is designed with scale in mind, more sensors to come...
-
-_The Chair™️_ -isn't it beautiful.
-<img src="./assets/pictures/chair.png" alt="The Chair In Question" class="custom-img-size" />
-
-
-
-### Overview:
-
-- **Chair Sensor: Device to read and send data**
-
-  <img src="./assets/pictures/chair_sensor_top_view.png" alt="Sensor Top View" class="custom-img-size" />
-  <img src="./assets/pictures/chair_sensor_corner_view.png" alt="Sensor Corner View" class="custom-img-size" />
-  - [Link to Repo](https://github.com/DevinMB/LoadCell-Kafka/blob/master/chair_v4.py)
-  - **Description:** Yes that's duct tape, yes I need to 3D print a top. I created a small foot for my chair that houses a Rasberry PI, HX711 and a load cell. Forking from the HX711 sensor amplifier repo, I created a simple script to read input values and send an events to a raw sit topic. 
-
-- **Light Controller: Because why not**
-  - [Link to Repo](https://github.com/DevinMB/sit-light-controller)
-  - **Description:** This repository focuses on controlling the lights based on actions recieved in the raw sit topic. If a sit down is recieved it will turn on the light behind the chair, light will dim when you get up as well. 
-
-- **Sit Record Producer: taking two records to make a sit event**
-  - [Link to Repo](https://github.com/DevinMB/LoadCell-Kafka/blob/master/kafka_sit_producer_v2.py)
-  - **Description:** This consumer of the raw sit topic takes in a sit down event and a sit up event to generate a Sit event. This sit event contains things like avg value (weight), timestamp for start and end of sit, duration, and a few other things. 
-
-- **Device Status Stream: makes the status of a device available to consumers**
-  - [Link to Repo](https://github.com/DevinMB/device-status-stream)
-  - **Description:** This consumer of the raw sit topic takes in a sit down event and a sit up event to device status messages. These messages will be used in getting the current status of a device at any given time. (used in dashboard)
-
-- **Sit Stats API: provides all sorts of sit data to consumers**
-  - [Link to Repo](https://github.com/DevinMB/sit-stats-api)
-  - **Description:** This consumer of the sit topic aggregates all sits and provides endpoints to get information on a device. As well it also consumes from the device status topic. As well as a restful API this application also exposes web sockets for providing a live update of device status's to its consumers.
-
-- **Sit Stats Dashboard: A UI for all this data!**
-  - [Link to Repo](https://github.com/DevinMB/sit-stats-dashboard)
-  - **Description:** I'm terrible at front end, but this UI was created in Vue.js and consumes from the web sockets provided by the Sit Stats API. Lets you filter by avg value, time of sit, and duration of sit. Clicking on a device opens the additional details and filters, otherwise device will only show a status of in use/not in use. 
-  - It look like this:
-    ![Dashboard UI](./assets/pictures/device_dashboard.png)
-
-
-
-
-
-
-
-## Whisper Bot: ML Kafka Pipelines are Cool
-
-My friends and I have an anonomous chat that is for memes. With about 30 people in this chat and a constant flow of data, I felt this would be a good use case for kafka and machine learning. 
-The bot consumes whispers and tries to make an impactful message to the group once a day. The results are silly, but the pipeline behind it was very fun to implement.
-In future releases I'd like to use reactions to it's messagse as sentiment in the next model. Or use a LLM like LLAMA 2 or something. We shall see!
-
-<img src="./assets/pictures/whisper_text_v1.png" alt="Example Whisper From Bot" class="custom-img-size" />
-
-
-### Overview:
-
-- **Whisper Consumer: Logs all text messages**
-  - [Link to Repo](https://github.com/DevinMB/whisper-consumer)
-  - **Description:** Leveraging the Telegram bot API, this application consumes messages sent to our anonomous group and produces to a raw message topic.
-
-- **Whisper training set producer: Cleans up the data**
-  - [Link to Repo](https://github.com/DevinMB/whisper-text-training-set-producer)
-  - **Description:** This application focuses on cleaning up all the messages in the raw message topic, making sure they are ready for training and then sending to a training set topic.
-
-- **Whisper model generator: Uses the data to make a model**
-  - [Link to Repo](https://github.com/DevinMB/whisper-text-trainer)
-  - **Description:** Consuming all the cleaned messsages, this application uses Tensorflow to build a model on the data provided, then converts this model into a TFlite file (smaller/more portable) and sends it to a model topic. 
-
-- **Whisper text generator: API that uses the model to generate text**
-  - [Link to Repo](https://github.com/DevinMB/whisper-text-generator)
-  - **Description:** This application looks for the most recent model in the topic and loads it, given a seed text and number of words this API can generate sentences (poorly) based of the model. When a new model comes in, the new model is loaded.
-
-- **Whisper text sender: Uses the API on a schedule**
-  - [Link to Repo](https://github.com/DevinMB/whisper-text-send-bot/tree/main)
-  - **Description:** This application schedules a whisper to be sent once a day using the new model.
-
-- **Whisper LLAMA2 Text Generation: We getting serious here**
-  - [Link to Repo](https://github.com/DevinMB/whisper-ollama-message-generator)
-  - **Description:** This application utilizes a LLAMA2 model, I'm embedding each text message and using the embeded vectors to generate messages. Next step is to embed websites and images sent to the chat, giving the model more context! 
-
+</article>
