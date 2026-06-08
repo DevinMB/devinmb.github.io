@@ -6,10 +6,9 @@ description: Lead software engineer specializing in Kafka and API development.
 
 <article class="card">
 
-  <!-- To use a photo instead of the monogram, drop a square image at
-       assets/pictures/profile.jpg and replace the line below with:
-       <img src="{{ '/assets/pictures/profile.jpg' | relative_url }}" alt="Devin Butts"> -->
-  <div class="avatar" aria-hidden="true">DB</div>
+  <div class="avatar">
+    <img src="{{ '/assets/pictures/profile.jpg' | relative_url }}" alt="Devin Butts">
+  </div>
 
   <h1 class="name">Devin Butts</h1>
   <p class="role">Lead software engineer specializing in Kafka &amp; API development.</p>
