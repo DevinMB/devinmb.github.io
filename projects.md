@@ -1,14 +1,115 @@
 ---
 layout: default
 title: Projects
-description: Side projects by Devin Butts — Kafka pipelines, LoRa IoT, edge ML, and a self-hosted homelab.
+description: Side projects by Devin Butts — a NOAA buoy telemetry platform, a fun-roads router, Kafka pipelines, LoRa IoT, and a self-hosted homelab.
 ---
 
 <p class="eyebrow">Selected work</p>
 
 # Projects
 
-<p class="intro">A run of things I've built for the fun of it — small services wired together with Kafka, a bit of hardware and radio, and a homelab to run it all on. The throughline: turning noisy real-world signals into something useful, with no cloud bill.</p>
+<p class="intro">A run of things I've built for the fun of it — small services wired together with Kafka, a bit of hardware and radio, and a homelab to run it all on. The throughline: turning noisy real-world signals into something useful, with no cloud bill. Two of them are live and public right now; the rest are below.</p>
+
+<p class="eyebrow section-eyebrow">Currently building</p>
+
+<section class="project featured">
+  <div class="project-header">
+    <h2>World of Buoys</h2>
+    <span class="project-tag live">Live</span>
+    <span class="project-tag">NOAA telemetry &times; Kafka</span>
+  </div>
+  <p class="project-lead">
+    NOAA publishes readings from roughly 1,300 ocean buoys, and almost none of it is
+    pleasant to look at. World of Buoys pulls the whole network every thirty minutes and
+    turns it into a dark telemetry console — a clustered live map, a fleet operations view,
+    a nearby-buoy finder, and a research tab that runs correlation and lead/lag analysis
+    across the fleet. Kafka-native end to end, self-hosted on the homelab, and the largest
+    thing I've built for myself.
+  </p>
+
+  <p class="project-links">
+    <a href="https://buoy.devinbutts.net">buoy.devinbutts.net</a>
+    <a href="https://github.com/DevinMB/bouy-lab">Repo</a>
+  </p>
+
+  <div class="components">
+    <div class="component">
+      <div class="component-top"><span class="component-title">Ingest</span></div>
+      <p class="component-desc">Scrapes NDBC's <code>realtime2</code> feed and station table on a 30-minute cycle — ~1,300 stations, fetched 16 at a time — and publishes one message per station per stream to Kafka.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Sink</span></div>
+      <p class="component-desc">Consumes the observation and station topics and upserts into CouchDB, so a replayed topic converges on the same state instead of duplicating it.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">API</span></div>
+      <p class="component-desc">A FastAPI service over CouchDB: per-station detail and time series, nearest-buoy lookup by station or coordinates, and fleet stats broken out by owner, type, and coverage.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Research Endpoints</span></div>
+      <p class="component-desc">Where it gets interesting — network and regional trend bands, a pairwise correlation matrix across any set of buoys, teleconnections that rank the whole fleet against a reference station, upstream leaders with a lead/lag forecast, and live anomaly ranking.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Frontend</span></div>
+      <p class="component-desc">A React/Vite SPA with Leaflet marker clustering behind nginx. Every buoy has its own shareable link, and readings convert from SI to imperial at the edge.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Deployment</span></div>
+      <p class="component-desc">Four Docker services on a Proxmox LXC, published through a Cloudflare Tunnel. It brings its own Kafka and CouchDB connections rather than standing up its own — it plugs into the homelab that was already there.</p>
+    </div>
+    <div class="component">
+      <div class="component-top">
+        <span class="component-title">Backend Producers (v1)</span>
+        <a class="component-repo" href="https://github.com/DevinMB/world-of-buoys-backend-producers">Repo</a>
+      </div>
+      <p class="component-desc">The original attempt — the pipelines that first proved NOAA's buoy data was worth pulling, and the starting point for everything above.</p>
+    </div>
+  </div>
+</section>
+
+<section class="project featured">
+  <div class="project-header">
+    <h2>Sassy Routes</h2>
+    <span class="project-tag live">Live</span>
+    <span class="project-tag">Routing &amp; road scoring</span>
+  </div>
+  <p class="project-lead">
+    A router that optimizes for fun instead of speed. Give it two points and it scores the
+    roads between them on how good they are to drive, then hands you the fun-versus-time
+    tradeoff and a Google Maps deep link for the winner. Built for the way I actually drive
+    the Miata, which is to say: the long way. The hard part isn't the map — it's defining
+    "fun" as a number and then getting a routing engine to respect it.
+  </p>
+
+  <p class="project-links">
+    <a href="https://sassyroutes.devinbutts.net">sassyroutes.devinbutts.net</a>
+    <a href="https://github.com/DevinMB/sassy-routes">Repo</a>
+  </p>
+
+  <div class="components">
+    <div class="component">
+      <div class="component-top"><span class="component-title">Fun Index</span></div>
+      <p class="component-desc">Scores every OSM way in the corridor on curvature and elevation — 13,000+ candidate roads between Grand Rapids and Holland alone. Currently being reworked to score the best fixed-length window within a road rather than averaging the whole thing, so a great five-mile road can outrank a 150-meter fragment.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Detour Budget</span></div>
+      <p class="component-desc">How much extra time a good road is worth. Expressed as minutes-per-kilometer plus an absolute floor, because a multiplier is the wrong shape — 3&times; allows forty extra minutes on an errand and three extra hours on a road trip, which is backwards from what a driver wants.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Road Seeking</span></div>
+      <p class="component-desc">Threading a specific road into a trip. Pinning its midpoint made the router solve two independent legs and drive up and back down the same road; pinning both endpoints in trip order fixed it, and made the sought road cheaper to include than the doubled-back version.</p>
+    </div>
+    <div class="component">
+      <div class="component-top"><span class="component-title">Re-traversal Penalty</span></div>
+      <p class="component-desc">A tunable per-kilometer cost charged against the detour budget for driving the same road twice. A penalty rather than a ban, since a genuinely spectacular dead end earns the double-back.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-break">
+  <p class="eyebrow">Also built</p>
+  <p>Earlier projects, still running. Most of these are where the Kafka-and-sensors habit came from.</p>
+</div>
 
 <section class="project">
   <div class="project-header">
@@ -238,7 +339,7 @@ description: Side projects by Devin Butts — Kafka pipelines, LoRa IoT, edge ML
         <span class="component-title">CosmicSleep</span>
         <a class="component-repo" href="https://github.com/DevinMB/noaa-swpc-sleep-tracker">Repo</a>
       </div>
-      <p class="component-desc">A citizen-science dashboard exploring whether geomagnetic activity affects sleep — live NOAA space-weather data vs. crowdsourced sleep reports. <a href="https://sleep.devinbutts.net">sleep.devinbutts.net</a></p>
+      <p class="component-desc">A citizen-science dashboard exploring whether geomagnetic activity affects sleep — NOAA space-weather data against crowdsourced sleep reports. Built, run for a while, and retired once it had answered the question for me.</p>
     </div>
     <div class="component">
       <div class="component-top">
@@ -253,13 +354,6 @@ description: Side projects by Devin Butts — Kafka pipelines, LoRa IoT, edge ML
         <a class="component-repo" href="https://github.com/DevinMB/robo-runner">Repo</a>
       </div>
       <p class="component-desc">A remote-controlled RC car that live-streams its video feed and takes driving input over Redis.</p>
-    </div>
-    <div class="component">
-      <div class="component-top">
-        <span class="component-title">World of Buoys</span>
-        <a class="component-repo" href="https://github.com/DevinMB/world-of-buoys-backend-producers">Repo</a>
-      </div>
-      <p class="component-desc">Data pipelines that pull NOAA's entire buoy network and turn it into something worth looking at.</p>
     </div>
     <div class="component">
       <div class="component-top">

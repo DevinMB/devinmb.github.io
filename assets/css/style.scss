@@ -289,6 +289,55 @@ hr {
   margin-top: 3.2rem;
 }
 
+/* Lead projects — the two things I'd point at first */
+.section-eyebrow {
+  margin-top: 3.4rem;
+}
+
+.project.featured {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: 1.6rem;
+}
+.project.featured::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.4rem;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, var(--sage), rgba(143, 163, 130, 0));
+}
+.project.featured .project-lead {
+  font-size: 1.05rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.3rem;
+  margin: -1.1rem 0 1.6rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+.project-links a::after { content: " \2197"; }
+
+.section-break {
+  margin-top: 4.2rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--line);
+}
+.section-break p:not(.eyebrow) {
+  margin: 0.5rem 0 0;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.section-break + .project {
+  margin-top: 2.6rem;
+}
+
 .project-header {
   display: flex;
   flex-wrap: wrap;
@@ -305,6 +354,10 @@ hr {
   border-radius: 999px;
   padding: 0.18rem 0.7rem;
   font-weight: 500;
+}
+.project-tag.live {
+  color: #fff;
+  background: var(--sage-700);
 }
 
 .project-lead {
@@ -402,6 +455,7 @@ hr {
   body { font-size: 16px; }
   .card { padding: 2.2rem 1.6rem 1.8rem; }
   .components.cols-2 { grid-template-columns: 1fr; }
+  .project.featured { padding-left: 1rem; }
   .component-top { flex-direction: column; gap: 0.2rem; }
   .component-repo { white-space: normal; }
 }

@@ -1,7 +1,7 @@
 ---
 layout: card
 title: Devin Butts
-description: Lead software engineer specializing in Kafka and API development.
+description: Lead software engineer — Kafka streaming platforms, API design, and building with AI agents.
 ---
 
 <article class="card">
@@ -11,7 +11,7 @@ description: Lead software engineer specializing in Kafka and API development.
   </div>
 
   <h1 class="name">Devin Butts</h1>
-  <p class="role">Lead software engineer specializing in Kafka &amp; API development.</p>
+  <p class="role">Lead software engineer. Kafka &amp; API platforms, and building with AI agents.</p>
 
   <div class="divider"></div>
 
