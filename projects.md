@@ -83,7 +83,6 @@ description: Side projects by Devin Butts — a NOAA buoy telemetry platform, a 
 
   <p class="project-links">
     <a href="https://sassyroutes.devinbutts.net">sassyroutes.devinbutts.net</a>
-    <a href="https://github.com/DevinMB/sassy-routes">Repo</a>
   </p>
 
   <div class="components">
