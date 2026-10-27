@@ -13,10 +13,30 @@
 
 - name: Sassy Routes
   group: live
-  line: A router that finds the fun roads to a destination, lets you trade fun against extra time, and hands the route to Google Maps.
+  line: A router that finds the fun roads to a destination (Michigan only, for now), lets you trade fun against extra time, and hands the route to Google Maps.
   stack: [Python, TypeScript, GraphHopper, React, CouchDB]
   repo: https://github.com/DevinMB/sassy-routes
   live: https://sassyroutes.devinbutts.net
+
+- name: "Argus: a homelab that runs itself"
+  group: built
+  line: Two sites of servers and apps that patch, back up and redeploy themselves, watched by Argus, a monitor I built that checks every service every minute.
+  stack: [Python, FastAPI, React, Ansible, Docker, Prometheus, GitHub Actions]
+  extra:
+    - [Shared CI, https://github.com/DevinMB/workflows]
+  more:
+    - >-
+      Every app and server needs regular security updates. Done by hand, that is
+      hours of careful, repetitive work each week, and skipping it is how systems
+      get breached. Here it happens on its own: each update is tested before it
+      goes live, every machine is backed up or snapshotted before it changes, and
+      anything that breaks is rolled back automatically.
+    - >-
+      Argus is the watchtower over all of it, named for the hundred-eyed giant of
+      Greek myth who never slept. It checks about 30 services every minute, shows
+      what changed and why, and only wakes me when a decision really needs a
+      person. It is the same discipline a company's IT team follows, running
+      unattended at home.
 
 - name: MARS
   group: built
@@ -25,12 +45,6 @@
   repo: https://github.com/DevinMB/mars
   extra:
     - [Connectors, https://github.com/DevinMB/mars-connectors]
-
-- name: Self-running homelab
-  group: built
-  line: A two-site homelab that patches and redeploys itself, with CI-gated updates, GitOps stacks, snapshot-and-rollback patching and its own monitor.
-  stack: [Ansible, Docker, Proxmox, Prometheus, GitHub Actions]
-  repo: https://github.com/DevinMB/workflows
 
 - name: Deal Watch
   group: built
