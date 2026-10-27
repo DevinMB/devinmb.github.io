@@ -1,0 +1,85 @@
+# Projects shown on /projects.html, in this order. One entry per project:
+#   name, line (one sentence: what it achieves), stack (languages and the main
+#   tools), repo (a public repo; leave it out if there is none), live (a public
+#   URL, optional), extra (more links: [label, url] pairs, optional),
+#   group: live | built | small (which section it lands in).
+
+- name: World of Buoys
+  group: live
+  line: The whole NOAA buoy network, about 1,300 stations, as a live telemetry console with a map, fleet view and correlation research.
+  stack: [Python, FastAPI, React, Kafka, CouchDB]
+  repo: https://github.com/DevinMB/bouy-lab
+  live: https://buoy.devinbutts.net
+
+- name: Sassy Routes
+  group: live
+  line: A router that finds the fun roads to a destination, lets you trade fun against extra time, and hands the route to Google Maps.
+  stack: [Python, TypeScript, GraphHopper, React, CouchDB]
+  repo: https://github.com/DevinMB/sassy-routes
+  live: https://sassyroutes.devinbutts.net
+
+- name: MARS
+  group: built
+  line: A workspace for building and running Apache Flink SQL pipelines, with a pipeline map, scheduling, savepoints and run history.
+  stack: [Python, JavaScript, Java, Apache Flink]
+  repo: https://github.com/DevinMB/mars
+  extra:
+    - [Connectors, https://github.com/DevinMB/mars-connectors]
+
+- name: Self-running homelab
+  group: built
+  line: A two-site homelab that patches and redeploys itself, with CI-gated updates, GitOps stacks, snapshot-and-rollback patching and its own monitor.
+  stack: [Ansible, Docker, Proxmox, Prometheus, GitHub Actions]
+  repo: https://github.com/DevinMB/workflows
+
+- name: Deal Watch
+  group: built
+  line: Watches eBay, Craigslist, OfferUp and Slickdeals for listings well under their usual price, checks them with a local LLM, and sends a Telegram alert.
+  stack: [Python, FastAPI, Playwright, Ollama]
+  repo: https://github.com/DevinMB/deals-scanner
+
+- name: Personal Health Pipeline
+  group: built
+  line: Phone and wearable readings streamed through Kafka into CouchDB and a mobile-first dashboard of vitals, activity and sleep.
+  stack: [JavaScript, React, Recharts, Express, Kafka, CouchDB]
+  repo: https://github.com/DevinMB/dmb-status
+
+- name: The Chair
+  group: built
+  line: A load cell under my chair turns every sit into a Kafka event that drives the lights and a live dashboard.
+  stack: [Python, Raspberry Pi, Kafka]
+  repo: https://github.com/DevinMB/LoadCell-Kafka
+
+- name: Whisper Bot
+  group: built
+  line: Reads an anonymous group chat into Kafka, trains on it, and posts one gloriously absurd message of its own each day.
+  stack: [Python, Kafka, TensorFlow, Ollama]
+  repo: https://github.com/DevinMB/whisper-consumer
+  extra:
+    - [Trainer, https://github.com/DevinMB/whisper-text-trainer]
+
+- name: Farm Sensor Network
+  group: built
+  line: Solar ESP32 nodes speaking raw LoRa to a Raspberry Pi hub, a Go API and a live dashboard that can flash new nodes.
+  stack: [Go, C++, TypeScript, LoRa]
+  repo: https://github.com/DevinMB/farm-iot
+  extra:
+    - [Dashboard, https://github.com/DevinMB/FarmIoT-Dashboard]
+
+- name: CosmicSleep
+  group: small
+  line: Does geomagnetic activity affect sleep? NOAA space weather against crowdsourced sleep reports.
+  stack: [TypeScript, React]
+  repo: https://github.com/DevinMB/noaa-swpc-sleep-tracker
+
+- name: Robo-Runner
+  group: small
+  line: An RC car that streams its camera and takes driving input over Redis.
+  stack: [Python, Redis]
+  repo: https://github.com/DevinMB/robo-runner
+
+- name: Grain Mill Automation
+  group: small
+  line: Stops a Blichmann grain mill by itself after each fill.
+  stack: [Python, Raspberry Pi]
+  repo: https://github.com/DevinMB/blichmann-grain-automation
