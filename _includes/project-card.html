@@ -1,0 +1,19 @@
+{%- comment -%} One project card. include.p: an entry from _data/projects.yml {%- endcomment -%}
+{%- assign p = include.p -%}
+<article class="pcard{% if p.live %} pcard-live{% endif %}">
+  <div class="pcard-top">
+    <h3>{{ p.name }}</h3>
+    {%- if p.live %}<span class="pill pill-live">Live</span>{% endif %}
+  </div>
+  {%- if p.live %}
+  <a class="pcard-url" href="{{ p.live }}">{{ p.live | remove: 'https://' }}</a>
+  {%- endif %}
+  <p class="pcard-line">{{ p.line }}</p>
+  <ul class="stack" aria-label="Stack">
+    {%- for s in p.stack %}<li>{{ s }}</li>{% endfor -%}
+  </ul>
+  <div class="pcard-links">
+    {%- if p.repo %}<a href="{{ p.repo }}">Repo</a>{% endif -%}
+    {%- for e in p.extra %}<a href="{{ e[1] }}">{{ e[0] }}</a>{% endfor -%}
+  </div>
+</article>
