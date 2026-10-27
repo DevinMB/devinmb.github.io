@@ -390,32 +390,11 @@ hr {
 }
 .pcard-links a::after { content: " \2197"; font-size: 0.8em; }
 
-.pcard-more summary {
-  cursor: pointer;
-  width: fit-content;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--sage-700);
-  list-style: none;
-}
-.pcard-more summary::-webkit-details-marker { display: none; }
-.pcard-more summary::after { content: " +"; }
-.pcard-more[open] summary::after { content: " \2212"; }
-.pcard-more summary:hover { color: var(--sage-600); }
-.pcard-more summary:focus-visible { outline: 2px solid var(--sage); outline-offset: 2px; border-radius: 4px; }
-.pcard-more-body {
-  margin: 0.5rem 0 0.1rem;
-  padding: 0.7rem 0.85rem;
-  border-left: 2px solid var(--sage);
-  background: #f5f7f1;
-  border-radius: 0 8px 8px 0;
-}
-.page .pcard-more-body p { margin: 0; font-size: 0.88rem; line-height: 1.55; }
-.page .pcard-more-body p + p { margin-top: 0.6rem; }
-
 /* The Argus page: screenshots with a caption each */
 .page .eyebrow a { color: inherit; }
-.argus-why { max-width: 42rem; font-size: 0.95rem; }
+.argus-why { max-width: 46rem; margin-top: 2.2rem; }
+.page .argus-why h2 { margin-top: 0; }
+.page .argus-why p { font-size: 1.02rem; }
 .shot { margin: 2.2rem 0 0; }
 .shot img {
   display: block;

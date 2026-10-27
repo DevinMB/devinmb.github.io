@@ -9,12 +9,6 @@
   <a class="pcard-url" href="{{ p.live }}">{{ p.live | remove: 'https://' }}</a>
   {%- endif %}
   <p class="pcard-line">{{ p.line }}</p>
-  {%- if p.more %}
-  <details class="pcard-more">
-    <summary>Why it matters</summary>
-    <div class="pcard-more-body">{% for para in p.more %}<p>{{ para }}</p>{% endfor %}</div>
-  </details>
-  {%- endif %}
   <ul class="stack" aria-label="Stack">
     {%- for s in p.stack %}<li>{{ s }}</li>{% endfor -%}
   </ul>
