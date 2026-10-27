@@ -11,7 +11,11 @@ description: Argus, the monitor behind my self-running homelab. Every service ch
 
 <p class="intro">Argus watches a two-site homelab: about 30 services, checked every minute, and the pipeline that keeps them patched. It is quiet by design. It only asks for a person when one is needed.</p>
 
-<p class="argus-why">Named for the hundred-eyed giant of Greek myth who never slept all at once: a few eyes always open. Each tick on the ring is one of his eyes, one per service.</p>
+<section class="argus-why">
+  <h2>Why it matters</h2>
+  <p>Every app and server needs regular security updates. Done by hand, that is hours of careful, repetitive work each week, and skipping it is how systems get breached. Here it happens on its own: each update is tested before it goes live, every machine is backed up or snapshotted before it changes, and anything that breaks is rolled back automatically.</p>
+  <p>Argus is the watchtower over all of it, named for the hundred-eyed giant of Greek myth who never slept all at once. It checks every service every minute, shows what changed and why, and only wakes me when a decision really needs a person. It is the same discipline a company's IT team follows, running unattended at home.</p>
+</section>
 
 <figure class="shot">
   <img src="{{ '/assets/pictures/argus/argus-overview.jpg' | relative_url }}" alt="Argus overview: a ring of 29 ticks, 29 of 29 checks up, 'All quiet', and a grid of services with their status" loading="lazy">

@@ -25,19 +25,6 @@
   extra:
     - [See Argus, /argus.html]
     - [Shared CI, https://github.com/DevinMB/workflows]
-  more:
-    - >-
-      Every app and server needs regular security updates. Done by hand, that is
-      hours of careful, repetitive work each week, and skipping it is how systems
-      get breached. Here it happens on its own: each update is tested before it
-      goes live, every machine is backed up or snapshotted before it changes, and
-      anything that breaks is rolled back automatically.
-    - >-
-      Argus is the watchtower over all of it, named for the hundred-eyed giant of
-      Greek myth who never slept. It checks about 30 services every minute, shows
-      what changed and why, and only wakes me when a decision really needs a
-      person. It is the same discipline a company's IT team follows, running
-      unattended at home.
 
 - name: MARS
   group: built
