@@ -23,6 +23,7 @@
   line: Two sites of servers and apps that patch, back up and redeploy themselves, watched by Argus, a monitor I built that checks every service every minute.
   stack: [Python, FastAPI, React, Ansible, Docker, Prometheus, GitHub Actions]
   extra:
+    - [See Argus, /argus.html]
     - [Shared CI, https://github.com/DevinMB/workflows]
   more:
     - >-
