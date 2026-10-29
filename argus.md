@@ -18,10 +18,18 @@ description: Argus, the monitor behind my self-running homelab. Every service ch
 </section>
 
 <figure class="shot">
-  <img src="{{ '/assets/pictures/argus/argus-overview.jpg' | relative_url }}" alt="Argus overview: a ring of 29 ticks, 29 of 29 checks up, 'All quiet', and the three weekly patch runs with their last result and next date" loading="lazy">
+  <img src="{{ '/assets/pictures/argus/argus-overview.jpg' | relative_url }}" alt="Argus overview: a ring of 29 ticks, 29 of 29 checks up, 'All quiet', and nothing needing attention" loading="lazy">
   <figcaption>
     <strong>Everything at a glance.</strong>
-    One tick per service. A check that fails three times in a row is down, and the critical ones page my phone. "All quiet" is the normal state, so anything else stands out at once. Below it are the weekly patch runs for guests and hosts: how the last one went and when the next one starts.
+    One tick per service. A check that fails three times in a row is down, and the critical ones page my phone. "All quiet" is the normal state, so anything else stands out at once.
+  </figcaption>
+</figure>
+
+<figure class="shot">
+  <img src="{{ '/assets/pictures/argus/argus-runs.jpg' | relative_url }}" alt="Scheduled runs: a week strip with the Monday, Tuesday and Thursday patch runs, and a card for each run with its steps and last result" loading="lazy">
+  <figcaption>
+    <strong>Patching on a calendar, with no one at the keyboard.</strong>
+    Once a week every VM, container and server gets its updates, one machine at a time: a snapshot or backup first, a health check after, and an automatic rollback if anything breaks. Each card says in plain words what the run covers, the steps it takes and how it went last time. A run that fails or does not happen pages me.
   </figcaption>
 </figure>
 
