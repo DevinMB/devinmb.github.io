@@ -18,10 +18,18 @@ description: Argus, the monitor behind my self-running homelab. Every service ch
 </section>
 
 <figure class="shot">
-  <img src="{{ '/assets/pictures/argus/argus-overview.jpg' | relative_url }}" alt="Argus overview: a ring of 29 ticks, 29 of 29 checks up, 'All quiet', and a grid of services with their status" loading="lazy">
+  <img src="{{ '/assets/pictures/argus/argus-overview.jpg' | relative_url }}" alt="Argus overview: a ring of 29 ticks, 29 of 29 checks up, 'All quiet', and the three weekly patch runs with their last result and next date" loading="lazy">
   <figcaption>
     <strong>Everything at a glance.</strong>
-    One tick per service. A check that fails three times in a row is down, and the critical ones page my phone. "All quiet" is the normal state, so anything else stands out at once.
+    One tick per service. A check that fails three times in a row is down, and the critical ones page my phone. "All quiet" is the normal state, so anything else stands out at once. Below it are the weekly patch runs for guests and hosts: how the last one went and when the next one starts.
+  </figcaption>
+</figure>
+
+<figure class="shot">
+  <img src="{{ '/assets/pictures/argus/argus-services.jpg' | relative_url }}" alt="Every service by group, one compact line each: apps, home services, the data platform, the machines and the monitoring, all up" loading="lazy">
+  <figcaption>
+    <strong>Healthy is one line.</strong>
+    Each service that is fine takes a single line, grouped by what it is. Only a service with a problem gets a full card with its error, so a problem is the first thing you see.
   </figcaption>
 </figure>
 
@@ -34,10 +42,10 @@ description: Argus, the monitor behind my self-running homelab. Every service ch
 </figure>
 
 <figure class="shot">
-  <img src="{{ '/assets/pictures/argus/argus-updates.jpg' | relative_url }}" alt="The Updates view: one card per app with its newest change and a six-step track, plus counts of updates waiting, failing and merged" loading="lazy">
+  <img src="{{ '/assets/pictures/argus/argus-updates.jpg' | relative_url }}" alt="The Updates view: 'All 11 apps up to date', a five-lane board from Testing to Live with every app in the Live lane, and one plain-language row per app" loading="lazy">
   <figcaption>
     <strong>Updates that apply themselves.</strong>
-    Every app's newest change on its way to production. Routine updates are tested, merged, built, scanned and deployed without me: 18 in the last two weeks. Only big version jumps wait for a person.
+    One sentence says whether anything needs me. A board shows which stage each app is in: testing, merging, building, deploying or live. Each app then gets one plain sentence on where it is. Routine updates go all the way to live without me; only major version jumps wait for a person.
   </figcaption>
 </figure>
 
