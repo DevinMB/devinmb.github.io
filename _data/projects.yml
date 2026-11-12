@@ -18,13 +18,11 @@
   repo: https://github.com/DevinMB/sassy-routes
   live: https://sassyroutes.devinbutts.net
 
-- name: "Argus: a homelab that runs itself"
+- name: Argus
   group: built
-  line: Two sites of servers and apps that patch, back up and redeploy themselves, watched by Argus, a monitor I built that checks every service every minute.
-  stack: [Python, FastAPI, React, Ansible, Docker, Prometheus, GitHub Actions]
-  extra:
-    - [See Argus, /argus.html]
-    - [Shared CI, https://github.com/DevinMB/workflows]
+  line: Keeps a homelab watched, patched and deployed from one container. It checks every service, patches each host on a schedule once it has a backup, and deploys Compose stacks from git.
+  stack: [Python, FastAPI, React, Go, Docker, SQLite]
+  repo: https://github.com/DevinMB/argus
 
 - name: MARS
   group: built
@@ -65,8 +63,6 @@
   line: Solar ESP32 nodes speaking raw LoRa to a Raspberry Pi hub, a Go API and a live dashboard that can flash new nodes.
   stack: [Go, C++, TypeScript, LoRa]
   repo: https://github.com/DevinMB/farm-iot
-  extra:
-    - [Dashboard, https://github.com/DevinMB/FarmIoT-Dashboard]
 
 - name: CosmicSleep
   group: small
