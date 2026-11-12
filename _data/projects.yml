@@ -63,8 +63,6 @@
   line: Solar ESP32 nodes speaking raw LoRa to a Raspberry Pi hub, a Go API and a live dashboard that can flash new nodes.
   stack: [Go, C++, TypeScript, LoRa]
   repo: https://github.com/DevinMB/farm-iot
-  extra:
-    - [Dashboard, https://github.com/DevinMB/FarmIoT-Dashboard]
 
 - name: CosmicSleep
   group: small
